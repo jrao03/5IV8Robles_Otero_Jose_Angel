@@ -141,6 +141,11 @@ function desplazamiento(prueba){
     if(num.length==0){
         num="0";
         alert("si no escribes numeros en : \"se desplazara:\" se tomara desplazamiento 0")
+    }if(num.length==1){
+        if(num.charAt(0)=='-'){
+            num="0";
+        alert("si no escribes numeros en : \"se desplazara:\" se tomara desplazamiento 0")
+        }
     }
     num = parseInt(num, 10);
     num= num%27;
