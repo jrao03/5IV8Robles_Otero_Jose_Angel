@@ -17,6 +17,7 @@ var cesar= cesar|| (function(){
         //verificar si esta vacio
         if(i != -1){
             var pos = i;
+            console.log("pos pre: "+pos);
             if(action){
                 //cifrando
                 pos += desp;
@@ -24,13 +25,20 @@ var cesar= cesar|| (function(){
                 if(pos>25){
                     pos -=26;
                 }
+                if(pos < 0){
+                    pos +=26;
+                }
             }else{
                 //Descifrando
                 pos -= desp;
                 if(pos < 0){
                     pos +=26;
                 }
+                if(pos>25){
+                    pos -=26;
+                }
             }
+            console.log("pos post: "+pos);
             return abc[pos];
         }
         return c;
@@ -108,6 +116,11 @@ function desplazamiento(prueba){
     toString(prueba);
     if(prueba.length<=40){
         for (i=0; i<prueba.length; i++){
+            if(num.length==0){
+                if(prueba.charAt(i)=='-'){
+                    num += prueba.charAt(i);
+                }
+            }
             if(expReg.test(prueba.charAt(i))){
             
                 num+= prueba.charAt(i);
@@ -132,7 +145,7 @@ function desplazamiento(prueba){
     num = parseInt(num, 10);
     num= num%27;
     
-
+    console.log(typeof (num));
     return(num);
     
 }
