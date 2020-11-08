@@ -106,18 +106,32 @@ function desplazamiento(prueba){
     let expReg = /^([0-9])+$/;
     var num = "";
     toString(prueba);
-    for (i=0; i<prueba.length; i++){
-        if(expReg.test(prueba.charAt(i))){
-           
-            num+= prueba.charAt(i);
-        }
+    if(prueba.length<=40){
+        for (i=0; i<prueba.length; i++){
+            if(expReg.test(prueba.charAt(i))){
+            
+                num+= prueba.charAt(i);
+            }
 
+        }
+    }else{
+        alert("solo se tomaran en cuenta los primeros 40 digitos")
+        for (i=0; i<40; i++){
+            if(expReg.test(prueba.charAt(i))){
+            
+                num+= prueba.charAt(i);
+            }
+
+        }
     }
+
     if(num.length==0){
         num="0";
+        alert("si no escribes numeros en : \"se desplazara:\" se tomara desplazamiento 0")
     }
     num = parseInt(num, 10);
     num= num%27;
+    
 
     return(num);
     
