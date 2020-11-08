@@ -7,7 +7,7 @@ var cesar= cesar|| (function(){
         var replace = (function(){
             //abecedario
             var abc = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
-        'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'v',
+        'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
     'w', 'x',  'y', 'z'];
     var l = abc.length;
 
@@ -22,20 +22,20 @@ var cesar= cesar|| (function(){
                 //cifrando
                 pos += desp;
                 //console.log(c);
-                if(pos>25){
-                    pos -=26;
+                if(pos>26){
+                    pos -=27;
                 }
                 if(pos < 0){
-                    pos +=26;
+                    pos +=27;
                 }
             }else{
                 //Descifrando
                 pos -= desp;
                 if(pos < 0){
-                    pos +=26;
+                    pos +=27;
                 }
-                if(pos>25){
-                    pos -=26;
+                if(pos>26){
+                    pos -=27;
                 }
             }
             console.log("pos post: "+pos);
