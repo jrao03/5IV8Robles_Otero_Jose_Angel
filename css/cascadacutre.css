@@ -1,0 +1,30 @@
+body {
+    background-color: lightblue;
+  }
+table{
+    padding-top: 10%;
+    padding-left: 33%;
+}
+h4{
+    color: deeppink;
+}
+#cadena{
+    color: darkviolet;
+    height: 40px;
+    text-align: center;
+    text-size-adjust: 2%;
+    background-color: lavender;
+}
+#button{
+    height: 65px;
+    width: 135px;
+    background-color: lawngreen;
+}
+#resultado{
+    color: darkviolet;
+    height: 40px;
+    text-align: center;
+    text-size-adjust: 2%;
+    background-color: lavender;
+    
+}
